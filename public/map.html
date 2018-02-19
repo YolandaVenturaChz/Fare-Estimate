@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title> API UBER</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/png" href="assets/images/car.ico" />
+  <!-- Framework Bootstrap vinculado -->
+  <link rel="stylesheet" href="vendors/bootstrap-4/css/bootstrap.min.css">
+  <!-- Archivo de estilos vinculado -->
+  <link rel="stylesheet" href="css/map.css" />
+  <!-- Iconos de Fontawesome vinculados -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#">Navbar</a>
+    </div>
+  </nav>
+  <section class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-md-6">
+        <br>
+        <br>
+        <input class="input-local col-md-8" type="text" placeholder="Ingrese su punto de partida" id="departure">
+        <br>
+        <br>
+        <input class="input-local col-md-8" type="text" placeholder="Ingrese su destino" id="finalize">
+        <br>
+        <br>
+        <button class="btn btn-white center" id="search">camino</button>
+      </div>
+      <div class="col-xs-12 col-md-12 ">
+        <div class="box-map" id="map"></div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeAM-3ROjOrthjkE4iGJgPQ2LEkozMXgw&callback=initMap&libraries=places"></script>
+  <!-- Archivo Javascript vinculado -->
+    
+   <script src="vendors/tether/js/tether.min.js"></script>
+  <script src="vendors/bootstrap-4/js/bootstrap.min.js"></script>
+  <script src="js/map.js"></script>
+</body>
+
+</html>
