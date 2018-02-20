@@ -31,20 +31,28 @@ function initMap() {
       origin: departure.value,
       destination: finalize.value,
       travelMode: 'DRIVING'
-    }, function (response, status) {(status === 'OK') ?directionsDisplay.setDirections(response): window.alert('Ingrese direcciones validas');
+    }, function (response, status) {(status === 'OK') ?directionsDisplay.setDirections(response) & (document.getElementById('text1').className += "none")
+    & (document.getElementById('text2').className -= "none"): window.alert('Ingrese direcciones validas');
     });
 
   }
   directionsDisplay.setMap(map);
 
   const onChangeHandler = () => {
+    
     calculateAndDisplayRoute(directionsService, directionsDisplay);
   };
   document.getElementById('search').addEventListener('click', onChangeHandler);
-  document.getElementById('search').addEventListener('click', function () {
-   onChangeHandler ?( departure.value = '' , finalize.value = '') :alert('hola');
+   document.getElementById('search').addEventListener('click', function () {
+   
+  if (onChangeHandler) {
+    departure.value = '' ,
+    finalize.value = ''
+  } else{alert('hola');}
   });
-
+  function vamos() {
+    
+  }
 }
 const error = (_error) => {
   alert('Tenemos problemas para encontrar tu ubicación.');

@@ -19,10 +19,30 @@
   height: 50vh;
   padding: 1em;
   text-align: center;
+  
+}
+.none{
+  display: none;
 }
 .text1{
 background: white;
 padding: 1em;
+
+}
+
+#text2{
+  margin-top: 3em;
+}
+.purple1{
+  background: purple;
+  color: white;
+}
+.purple {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  background: purple;
 }
 .text2 {
   margin-top: 3em;
@@ -33,6 +53,7 @@ padding: 1em;
 header {
   height: 10vh;
 }
+
 a{
   color: black;
   font-family: 'Courier New', Courier, monospace;
@@ -43,10 +64,10 @@ li{
 }
 .btn{
   height: 2em;
-  margin-top: 0.5em;
+  margin-left: -1em;
 }
 .position {
-  z-index: 10000;
+
   height: 60vh;
   position: absolute;
   text-align: justify;
@@ -54,3 +75,4 @@ li{
 ul{
   list-style: none; 
 }
+

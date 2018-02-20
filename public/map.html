@@ -8,7 +8,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" type="image/png" href="assets/images/car.ico" />
   <!-- Framework Bootstrap vinculado -->
+ 
   <link rel="stylesheet" href="vendors/bootstrap-4/css/bootstrap.min.css">
+  <link href="assets/icons/font/css/open-iconic.css" rel="stylesheet">
   <!-- Archivo de estilos vinculado -->
   <link rel="stylesheet" href="css/map.css" />
   <!-- Iconos de Fontawesome vinculados -->
@@ -19,16 +21,16 @@
   <header>
     <nav class="container-fluid hidden-md-down">
       <ul class="row d-flex flex-row justify-content-around">
-        <li><a href="">UBER</a></li>
-        <li><a href="">Viaja</a></li>
-        <li><a href="">Conduce</a></li>
-        <li><a href="">AYUDA</a></li>
-        <li><a href="">INICIA SESIÓN</a></li>
-        <li><i>icon</i></li>
-        <li><a  type="btn" href="">CONVIERTÉTE EN SOCIO CONDUCTOR</a></li>
-      </ul>
-    </nav>
-    <div class=" hidden-md-up">
+          <li><a href="">UBER</a></li>
+          <li><a href="">Viaja</a></li>
+          <li><a href="">Conduce</a></li>
+          <li><a href="">AYUDA</a></li>
+          <li><a href="">INICIA SESIÓN</a></li>
+          <li><i>icon</i></li>
+          <li><a  type="btn" href="">CONVIERTÉTE EN SOCIO CONDUCTOR</a></li>
+        </ul>
+      </nav>
+      <!--  <div class=" hidden-md-up">
         <input class="input-local col-12 col-md-12" type="text" placeholder="Ingrese su punto de partida" id="departure">
         <div class="">
           <div class="input-group">
@@ -37,49 +39,66 @@
               <span class="input-group-text">
                 <a class="btn btn center col-1 col-md-1" id="search">-></a>
               </span>
-  
             </div>
+        </div>
+      </div>
+    </div> -->
+  </header>
+
+  <main class="container-fluid hidden-md-down">
+    <div class="row">
+      <div class="col-xs-12 col-md-4 position">
+        <br>
+        <br>
+        <div class="text">
+          <div class="text1 " id="text1">
+            <h3>Estimador de tarifas Uber</h3>
+            <p>Cuál es el costo de viajes Uber en tu ciudad?</p>
+            <p>Calcula una tarifa para tu próximo viaje.</p>
+            <p>Simplemente ingresa un punto de partida y un</p>
+            <p>destino para comenzar.</p>
+          </div>
+          <div class="text2 d-flex flex-column justify-content-around ">
+            <input class="input-local col-12 col-md-12" type="text" placeholder="Ingrese su punto de partida" id="departure">
+            <div class="">
+              <div class="input-group">
+                <input class="input-local col-10 col-md-11" type="text" placeholder="Ingrese su destino" id="finalize">                        
+                <a class="btn btn center col-1 col-md-1" id="search">
+                  <span class="oi" data-glyph="arrow-thick-right" title="icon arrow-thick-right" aria-hidden="true"></span>
+                </a>
+              </div>
+            </div>
+          </div>
+         <!--  ------------------------------------ -->
+          <div class="none" id="text2">
+            <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-center">Tus opciones:
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">UberBLACK
+                 <span>57-74 S/</span>
+                </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">uberX
+                 <span>30-38 S/.</span> 
+                </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">uberVAN
+                  <span>47-61 S/.</span>
+                </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">uberPOOL
+                  <span>32-33 S/.</span>
+                </li>
+                <li class="purple">
+                  <a href="#" class="list-group-item list-group-item-action purple1"> REGISTRATE PARA VIAJAR</a>
+                  <span class="oi" data-glyph="arrow-thick-right" title="icon arrow-thick-right" aria-hidden="true"></span>  
+                </li>
+            </ul> 
           </div>
         </div>
       </div>
-  </header>
- 
-  <main class="container-fluid hidden-md-down">
-    <div class="row">
-        <div class="col-xs-12 col-md-4 position">
-            <br>
-            <br>
-            <div class="text">
-              <div class="text1 ">
-                <h3>Estimador de tarifas Uber</h3>
-                <p>Cuál es el costo de viajes Uber en tu ciudad?</p>
-                <p>Calcula una tarifa para tu próximo viaje.</p>
-                <p>Simplemente ingresa un punto de partida y un</p>
-                <p>destino para comenzar.</p>
-              </div>
-              <div class="text2 d-flex flex-column justify-content-around ">
-                <input class="input-local col-12 col-md-12" type="text" placeholder="Ingrese su punto de partida" id="departure">
-                <div class="">
-                  <div class="input-group">
-                    <input class="input-local col-10 col-md-11" type="text" placeholder="Ingrese su destino" id="finalize">
-                    <div class="input-group">
-                      <span class="input-group-text">
-                        <a class="btn btn center col-1 col-md-1" id="search">-></a>
-                      </span>
-        
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
     </div>
   </main>
-  
   <section class="container-fluid">
     <div class="row box-map" id="map"></div>
   </section>
-
 
   <script src="vendors/jquery/jquery-3.2.1.min.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeAM-3ROjOrthjkE4iGJgPQ2LEkozMXgw&callback=initMap&libraries=places"></script>
@@ -87,7 +106,8 @@
 
   <script src="vendors/tether/js/tether.min.js"></script>
   <script src="vendors/bootstrap-4/js/bootstrap.min.js"></script>
-  <script src="js/map.js"></script>
+  <script src="js/map.js"></script> 
+  <!-- <script src="js/app.js"></script> -->
 </body>
 
 </html>
