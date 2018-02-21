@@ -59,15 +59,12 @@ a{
   font-family: 'Courier New', Courier, monospace;
   text-decoration: none;
 }
-li{
-  list-style: none;
-}
+
 .btn{
   height: 2em;
   margin-left: -1em;
 }
 .position {
-
   height: 60vh;
   position: absolute;
   text-align: justify;
