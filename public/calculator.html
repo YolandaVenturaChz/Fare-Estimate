@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fare Estimate</title>
+  <link href="css/calculator.css" rel="stylesheet">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Fare Estimate</h1>
+    <div class="wrapperAddressInputs">
+      <label for="originAddress">Origen</label>
+      <input id="inputOriginAddress" name="originAddress" placeholder="¿De dónde partes?" />
+      <br />
+      <label for="destinationAddress">Destino</label>
+      <input id="inputDestinationAddress" name="destinationAddress" placeholder="¿A dónde vas?" />
+      <label for="passengersNum">Número de pasajeros (1-4)</label>
+      <select id="selectPassengersNum" name="passengersNum">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+      <button id="buttonCalculateFare">¡Calcular tarifa!</button>
+      <p id="fareEstimate"></p>
+    </div>
+
+    <div id="map"></div>
+
+  </div>
+  </script>
+  <script type="text/javascript" src="js/calculator.js"></script>
+  <script async defer type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0EiemjmNY3TyeKXZUO5a3879S5enCd4U&libraries=places&callback=initialize">
+  </script>
+</body>
+
+</html>
